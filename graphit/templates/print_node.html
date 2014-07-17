@@ -1,0 +1,5 @@
+{% load visitor %}
+
+{% for node in allnodes %}
+  "{{ node.title }}":{ color:"#{{ node.getColor }}",shape:"{{ node.getShape }}",alpha:{{ node.getAlpha }} {% if node.isLinks %}, link: "{{node.getLinksStr}}" {%endif%} }{% if not forloop.last %},{% endif %}
+{% endfor %}

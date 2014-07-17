@@ -1,0 +1,5 @@
+<h1>Upload a zip file</h1>
+<form action='/graphit_admin/' method='post' enctype="multipart/form-data">{% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='Create' />
+</form>

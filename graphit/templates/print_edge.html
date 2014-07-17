@@ -1,0 +1,8 @@
+{% load visitor %}
+{% for node in allnodes %}
+  "{{ node.title }}":{
+    {% for child in node.edges.all %}
+      "{{ child.title }}":{}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  }{% if not forloop.last %},{% endif %}
+{% endfor %}

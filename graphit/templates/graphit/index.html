@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{%static 'graphit/style.css' %}" />
+
+{% if latest_graphs %}
+    <ul>
+    {% for graph in latest_graphs %}
+        <li><a href="{% url 'detail' graph.id %}">{{ graph.id }}  {{ graph.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No families are available.</p>
+{% endif %}

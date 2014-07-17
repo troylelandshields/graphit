@@ -1,0 +1,10 @@
+{% load visitor %}
+
+<ul>
+  <li>
+    {% pretty_print parent %}
+  </li>
+  {% for child in children %}
+    {% visit_r child visited %}
+  {% endfor %}
+</ul>

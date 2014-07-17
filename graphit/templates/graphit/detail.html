@@ -1,0 +1,19 @@
+{%load staticfiles %}
+{% load visitor %}
+
+<link rel="stylesheet" type="text/css" href="{%static 'graphit/css/nyroModal.css' %}" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{% static 'graphit/js/arbor.js' %}"></script>
+<script src="{% static 'graphit/js/arbor-graphics.js' %}"></script>
+<script src="{% static 'graphit/js/arbor-tween.js' %}"></script>
+<script type="text/javascript" src="{% static 'graphit/js/jquery.nyroModal.custom.js' %}"></script>
+
+<h1>{{graph.title}}</h1>
+
+<!--% visit graph.root % -->
+
+<canvas id='sitemap' width='100%' height='600'></canvas>
+<script>
+  var theUI = {nodes:{ {% print_nodes graph.root %} }, edges:{ {% print_edge graph.root %} } } ;
+</script>
+<script src="{% static 'graphit/js/prestopresento.js' %}"></script>

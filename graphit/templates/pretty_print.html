@@ -1,0 +1,7 @@
+{% load visitor %}
+
+{% if node.shape == 'dot' %}
+  {% branch_node node %}
+{% else %}
+  {% leaf_node node %}
+{% endif %}

@@ -1,0 +1,98 @@
+[
+  {
+    "pk": 1,
+    "model": "graphit.color",
+    "fields": {
+      "code": "000000",
+      "name": "Black"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "graphit.color",
+    "fields": {
+      "code": "434D5E",
+      "name": "Bluish Gray"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "graphit.color",
+    "fields": {
+      "code": "1D4F00",
+      "name": "Dark Green"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "graphit.color",
+    "fields": {
+      "code": "FFFF00",
+      "name": "Yellow"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "graphit.color",
+    "fields": {
+      "code": "008CFF",
+      "name": "Blue"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "graphit.color",
+    "fields": {
+      "code": "FF0000",
+      "name": "Red"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "graphit.color",
+    "fields": {
+      "code": "9C9C9C",
+      "name": "Gray"
+    }
+  },
+  {
+    "model": "graphit.abstractnode",
+    "pk": 1,
+    "fields": {
+      "n_type": "root",
+      "color": [1],
+      "shape": "dot",
+      "alpha": 1.0
+    }
+  },
+  {
+    "model": "graphit.abstractnode",
+    "pk": 2,
+    "fields": {
+      "n_type": "branch",
+      "color": [2,3],
+      "shape": "dot",
+      "alpha": 1.0
+    }
+  },
+  {
+    "model": "graphit.abstractnode",
+    "pk": 3,
+    "fields": {
+      "n_type": "leaf",
+      "color": [4,5,6],
+      "shape": "rectangle",
+      "alpha": 0.0
+    }
+  },
+  {
+    "model": "graphit.abstractnode",
+    "pk": 4,
+    "fields": {
+      "n_type": "linkless_leaf",
+      "color": [7],
+      "shape": "rectangle",
+      "alpha": 0.0
+    }
+  }
+]
